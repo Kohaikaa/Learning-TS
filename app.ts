@@ -1,13 +1,19 @@
-function getFullName(firstName: string, lastName: string): string {
-    return `${firstName} ${lastName}`;
+function getFullName(user: {
+    firstName: string,
+    nickname: string,
+    age: number
+}): string {
+    return `${user.firstName} ${user.nickname} ${user.age} y.o.`;
 }
+
 const getFullNameArrow = (firstName: string, lastName: string): string =>
     `${firstName} ${lastName}`;
 
 
-let a: number = 25;
-let b: number = 44;
-let myName: string = "Vlad";
-let isMale: boolean = true;
-let sum: number = a + b;
-console.log(`${myName} (is male: ${isMale}): ${a} + ${b} = ${sum}`);
+const user = {
+    firstName: "Vlad",
+    nickname: "Kohai",
+    age: 17
+};
+
+console.log(getFullName(user));
