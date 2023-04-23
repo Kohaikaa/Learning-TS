@@ -1,9 +1,10 @@
-"use strict";
 function getFullName(user) {
-    return `${user.firstName} ${user.nickname} ${user.age} y.o.`;
+    return "".concat(user.firstName, " ").concat(user.nickname, " ").concat(user.age, " y.o.");
 }
-const getFullNameArrow = (firstName, lastName) => `${firstName} ${lastName}`;
-const user = {
+var getFullNameArrow = function (firstName, lastName) {
+    return "".concat(firstName, " ").concat(lastName);
+};
+var user = {
     firstName: "Vlad",
     nickname: "Kohai",
     age: 17
